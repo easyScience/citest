@@ -25,8 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Install X11
-        run: sudo apt-get install xorg openbox
+      - name: Install and run X11
+        run: |
+          sudo apt-get install xorg
+          sudo apt-get install --no-install-recommends openbox
+          startx
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
