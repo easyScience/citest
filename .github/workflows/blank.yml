@@ -30,6 +30,13 @@ jobs:
           sudo apt install xorg
           sudo apt install --no-install-recommends openbox
 
+      - name: Prepare 1
+        run: usermod -a -G audio,lp,optical,storage,video,wheel,games,power,scanner runner
+
+      - name: Prepare 2
+        run: cp /etc/skel/.xinitrc ~/.xinitrc
+
+
       - name: Start X session
         run: sudo startx
 
