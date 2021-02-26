@@ -25,15 +25,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Set up *nix dependencies
-        run: |
-          sudo -E apt-add-repository -y "ppa:ubuntu-toolchain-r"
-          sudo apt-get install libasound2-dev libglew-dev libgles2-mesa-dev libalut-dev libxcursor-dev libxi-dev libxinerama-dev libxrandr-dev libxxf86vm-dev
+      - name: Install GUI
+        run: sudo apt-get install --no-install-recommends ubuntu-desktop
+      
+      #- name: Set up *nix dependencies
+      #  run: |
+      #    sudo -E apt-add-repository -y "ppa:ubuntu-toolchain-r"
+      #    sudo apt-get install libasound2-dev libglew-dev libgles2-mesa-dev libalut-dev libxcursor-dev libxi-dev libxinerama-dev libxrandr-dev libxxf86vm-dev
 
-      - name: Test
-        run: |
-          export DISPLAY=:99.0
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+      #- name: Test
+      #  run: |
+      #    export DISPLAY=:99.0
+      #    Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
       #- name: Install and run X11
       #  run: |
