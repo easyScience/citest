@@ -18,7 +18,7 @@ jobs:
       - name: Try xinit
         run: |
           echo "/usr/bin/openbox-session" >> ~/.xsession
-          sudo startx
+          sudo startx gnome-calculator
 #          exec openbox-session
 #          su -c 'startx gnome-calculator -- :1' runner
 #          sudo startx gnome-calculator -- :1
