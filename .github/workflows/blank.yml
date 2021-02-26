@@ -31,7 +31,7 @@ jobs:
           sudo apt install --no-install-recommends openbox
 
       - name: Start X session
-        run: startx
+        run: sudo startx
 
       #- name: Set up *nix dependencies
       #  run: |
