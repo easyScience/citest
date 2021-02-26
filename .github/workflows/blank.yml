@@ -17,5 +17,6 @@ jobs:
           
       - name: Try xinit
         run: |
-          sudo startx gnome-calculator -- :1
+          su -c 'startx gnome-calculator -- :1' runner
+#          sudo startx gnome-calculator -- :1
 #          sudo xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
