@@ -27,38 +27,7 @@ jobs:
       
       - name: Install GUI
         run: | 
-          sudo apt install xorg
-          sudo apt install --no-install-recommends openbox
-
-      - name: Prepare 1
-        run: sudo usermod -a -G audio,lp,video,games runner
-
-      - name: Prepare 2
-        run: cp /etc/skel/.xinitrc ~/.xinitrc
-
-
-      - name: Start X session
-        run: sudo startx
-
-      #- name: Set up *nix dependencies
-      #  run: |
-      #    sudo -E apt-add-repository -y "ppa:ubuntu-toolchain-r"
-      #    sudo apt-get install libasound2-dev libglew-dev libgles2-mesa-dev libalut-dev libxcursor-dev libxi-dev libxinerama-dev libxrandr-dev libxxf86vm-dev
-
-      #- name: Test
-      #  run: |
-      #    export DISPLAY=:99.0
-      #    Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-
-      #- name: Install and run X11
-      #  run: |
-      #    sudo apt-get install xorg
-      #    sudo apt-get install --no-install-recommends openbox
-      #    startx
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: xrandr -q
+          sudo apt-get install xvfb
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
