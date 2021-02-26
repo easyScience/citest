@@ -16,4 +16,4 @@ jobs:
           
       - name: Try xinit
         run: |
-          xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
+          sudo xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
