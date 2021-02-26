@@ -27,14 +27,12 @@ jobs:
       
       - name: Install GUI
         run: | 
-          sudo apt-get install xvfb
-          sudo apt-get install firefox
+          sudo apt install xorg
+          sudo apt install --no-install-recommends openbox
           
-      - name: Set up Xvfb on Linux
+      - name: Try xinit
         run: |
-          export DISPLAY=':99.0'
-          Xvfb :99 -screen 0 1440x1080x24 > /dev/null 2>&1 &
-          firefox
+          xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
 
       #- name: Run firefox
       #  run: firefox
