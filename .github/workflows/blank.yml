@@ -25,7 +25,9 @@ jobs:
           cd ~
           ls -l
           curl -O https://github.com/easyScience/easyDiffractionApp/releases/download/ubuntu-18.04/SilentInstall.js
+          ls -l
           curl -O https://github.com/easyScience/easyDiffractionApp/releases/download/ubuntu-18.04/easyDiffraction_Linux_x86-64_v0.0.5_ubuntu-18.04.zip
+          ls -l
           unzip easyDiffraction_Linux_x86-64_v0.0.5_ubuntu-18.04.zip
           ls -l
 
