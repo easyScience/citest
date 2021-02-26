@@ -17,6 +17,7 @@ jobs:
           
       - name: Try xinit
         run: |
-          su -c 'startx gnome-calculator -- :1' runner
+          exec openbox-session
+#          su -c 'startx gnome-calculator -- :1' runner
 #          sudo startx gnome-calculator -- :1
 #          sudo xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
