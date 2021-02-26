@@ -26,8 +26,13 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Install GUI
-        run: sudo apt-get install --no-install-recommends ubuntu-desktop
-      
+        run: | 
+          sudo apt install xorg
+          sudo apt install --no-install-recommends openbox
+
+      - name: Start X session
+        run: startx
+
       #- name: Set up *nix dependencies
       #  run: |
       #    sudo -E apt-add-repository -y "ppa:ubuntu-toolchain-r"
