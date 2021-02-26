@@ -14,11 +14,13 @@ jobs:
           sudo apt-get install xorg
           sudo apt-get install --no-install-recommends openbox
           sudo apt-get install gnome-calculator
+          sudo apt-get install -y xterm
           
       - name: Try xinit
         run: |
-          echo "/usr/bin/openbox-session" >> ~/.xsession
           sudo startx gnome-calculator
+#          echo "/usr/bin/openbox-session" >> ~/.xsession
+#          sudo startx gnome-calculator
 #          exec openbox-session
 #          su -c 'startx gnome-calculator -- :1' runner
 #          sudo startx gnome-calculator -- :1
