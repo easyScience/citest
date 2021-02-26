@@ -12,9 +12,8 @@ jobs:
       - name: Install GUI
         run: | 
           pwd
-          bkjjb
-          sudo apt-get install xorg
-          sudo apt-get install --no-install-recommends xubuntu-core
+#          sudo apt-get install xorg
+#          sudo apt-get install --no-install-recommends xubuntu-core
 #          sudo apt-get install gnome-calculator          
 #          sudo apt-get install --no-install-recommends ubuntu-desktop
 #          sudo apt-get install xorg
@@ -24,6 +23,7 @@ jobs:
 
       - name: Download app and script
         run: |
+          cd ~
           ls -l
           curl -O -L https://github.com/easyScience/easyDiffractionApp/releases/download/ubuntu-18.04/SilentInstall.js
           ls -l
@@ -34,7 +34,8 @@ jobs:
 
       - name: Install app
         run: |
-          sudo startx ~/work/easyDiffractionApp/easyDiffractionApp/easyDiffraction_Linux_x86-64_v0.0.5 --verbose --script ~/work/easyDiffractionApp/easyDiffractionApp/SilentInstall.js
+          ~/easyDiffraction_Linux_x86-64_v0.0.5 --verbose --script ~/SilentInstall.js
+#          sudo startx ~/work/easyDiffractionApp/easyDiffractionApp/easyDiffraction_Linux_x86-64_v0.0.5 --verbose --script ~/work/easyDiffractionApp/easyDiffractionApp/SilentInstall.js
 
       - name: Run app
         run: |
