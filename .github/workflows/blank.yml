@@ -11,6 +11,8 @@ jobs:
       
       - name: Install GUI
         run: | 
+          pwd
+          bkjjb
           sudo apt-get install xorg
           sudo apt-get install --no-install-recommends xubuntu-core
 #          sudo apt-get install gnome-calculator          
