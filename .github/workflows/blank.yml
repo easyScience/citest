@@ -11,9 +11,11 @@ jobs:
       
       - name: Install GUI
         run: | 
-          sudo apt install xorg
-          sudo apt install --no-install-recommends openbox
+          sudo apt-get install xorg
+          sudo apt-get install --no-install-recommends openbox
+          sudo apt-get install gnome-calculator
           
       - name: Try xinit
         run: |
-          sudo xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
+          sudo startx gnome-calculator -- :1
+#          sudo xinit /usr/ucb/rsh fasthost cpupig -display ws:1 --  :1 -a 2 -t 5
