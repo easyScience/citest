@@ -13,6 +13,7 @@ jobs:
         run: | 
           sudo apt-get install xorg
           sudo apt install --no-install-recommends xubuntu-core
+          sudo apt-get install gnome-calculator          
 #          sudo apt-get install --no-install-recommends ubuntu-desktop
 #          sudo apt-get install xorg
 #          sudo apt-get install --no-install-recommends openbox
