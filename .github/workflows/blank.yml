@@ -24,14 +24,10 @@ jobs:
         run: |
           cd ~
           ls -l
-          curl -O https://github.com/easyScience/easyDiffractionApp/releases/download/untagged-1f46799e5b5c868ad68d/SilentInstall.js
-          curl -O https://github.com/easyScience/easyDiffractionApp/releases/download/untagged-1f46799e5b5c868ad68d/easyDiffraction_Linux_x86-64_v0.0.5_ubuntu-18.04.zip
+          curl -O https://github.com/easyScience/easyDiffractionApp/releases/download/ubuntu-18.04/SilentInstall.js
+          curl -O https://github.com/easyScience/easyDiffractionApp/releases/download/ubuntu-18.04/easyDiffraction_Linux_x86-64_v0.0.5_ubuntu-18.04.zip
           unzip easyDiffraction_Linux_x86-64_v0.0.5_ubuntu-18.04.zip
           ls -l
-#          curl -O https://github.com/easyScience/citest/releases/download/citest/SilentInstall.js
-#          ls -l
-#          curl -O https://github.com/easyScience/citest/releases/download/citest/easyDiffraction_Linux_x86-64_v0.0.5_ubuntu-18.04.zip
-      
 
       - name: Install app
         run: |
